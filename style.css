@@ -210,33 +210,23 @@ body{
 }
 
 
-
-
-
-.main__slider {
-    scroll-snap-type: y mandatory;
+/* function slider */
+.main__slider{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    width: 360px;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
   }
-  
-  .slide {
+
+  .slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 360px;
     scroll-snap-align: start;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media(min-width:744px){
