@@ -1,0 +1,370 @@
+@font-face {
+    font-family: 'Gilroy' , sans-serif;
+    font-weight: 500;
+    src: url(fonts/Gilroy-Medium.ttf);
+}
+@font-face {
+    font-family: 'Gilroy' , sans-serif;
+    font-weight: 700;
+    src: url(fonts/Gilroy-Bold.ttf);
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    min-width: 360px;
+    font-style: normal;
+    /* height: 531px; */
+}
+
+
+/* main content */
+.main__content{
+    width: 337px;
+    padding: 25px 12px 16px 11px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(img/Group\ 1001\ mob.svg) no-repeat;
+}
+
+.content__title{
+    color: #000;
+    font-family: Gilroy;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 2px;
+}
+.content__title b{
+    font-size: 32px;
+}
+
+.content__text{
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%; 
+}
+
+.main__buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    width: 157px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 2px solid #A30040;
+    line-height: 19.2px;
+    text-decoration: none;
+    justify-content: space-around;
+}
+
+.button--order{
+    background: #A30040;
+    color: #FFF;
+    font-size: 13px;   
+    font-weight: 700;
+}
+
+.button--catalog{
+    background: #FFF;
+    color: #A30040;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+
+
+/* slider */
+
+
+.main__slider{
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.slide-1{
+    background: url(img/memorial.png), url(img/bg-slider-1.png);
+    background-position:87% 74%, 0;
+    background-repeat: no-repeat;
+    padding-top: 53px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slide-2{
+    display: block;
+}
+
+.main__slider::before{
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: 0px;
+    width: 187px;
+    height: 31px;
+    background: url(img/decoratespecialmob.png) no-repeat;
+    pointer-events: none;
+}
+
+.main__slider::after{
+    content: "спецпредложение";
+    color: #FFF;
+    font-size: 12px;
+    font-family: Akaya Kanadaka;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-align: center;
+    text-transform:uppercase;
+    position: absolute;
+    top: 9px;
+    right: 16px;
+    pointer-events: none;
+}
+
+.slider__title-first-slide{
+    color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12.8px; 
+    width: 208px;
+    margin-bottom: 10px;
+}
+
+.slider__title-first-slide b{
+    font-size: 20px;
+    line-height: 25.6px; 
+    font-weight: 500;
+}
+
+
+.slider__list{
+    display: flex;
+    padding: 0;
+    margin-top: 0px;
+    flex-direction: column;
+}
+
+.slider__list--first-slide{
+    margin-left: 10px;
+    color: #FFF;
+    list-style: none;
+    text-align: center;
+    font-size: 11.8px;
+    font-weight: 300;
+    line-height: 10px;
+    width: 187px;
+}
+
+.slider__item,
+.slider__del-price{
+    height: 21px;
+}
+.slider__price{
+    height: 35px;
+}
+
+
+.slider__list--second-slide{
+    margin: 48px 0 0 142px;
+    width: 218px;
+    height: 208px;
+    color: #293775;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+    padding-bottom: 0;
+    /* list-style: none; */
+    justify-content: space-evenly;
+}
+
+.slider__item--caption{
+    padding-left: 0;
+    list-style: none;
+    margin-left: -20px;
+}
+
+
+.slider__del-price{
+    text-decoration: line-through;
+    color: #8B8B8B;
+    font-size: 12px;
+    line-height: 24.96px;
+}
+
+.slider__price{
+    font-size: 20px;
+    line-height: 38.4px;
+}
+
+
+
+
+
+.main__slider {
+    scroll-snap-type: y mandatory;
+  }
+  
+  .slide {
+    scroll-snap-align: start;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width:744px){
+
+    body{
+        min-width: 744px;
+    }
+
+    .main__content{
+        background: url(img/Group\ 1001.svg) no-repeat;
+        width: 499px;
+        padding: 28px 97px 30px 148px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content__text{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%; 
+        margin-top: 6px;
+        width: 501px;
+    } 
+
+    .button{
+        width: 172px;
+    }
+
+    .button--order{
+        background: #A30040;
+        color: #FFF;
+        font-size: 15px;   
+        font-weight: 700;
+    }
+    
+    .button--catalog{
+        background: #FFF;
+        color: #A30040;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .content__title{
+        margin-bottom: 6px;
+        margin-top: 11px;
+    }
+
+    
+    
+
+    .main__buttons{
+        justify-content: flex-start;
+        column-gap: 44px;
+    }
+
+    .main__slider{
+        width: 744px;
+        margin-left: auto;
+        margin-right: auto;
+        background: url(img/memorial.png), url(img/bg-tablet.png);
+        background-position:50% 90%, 0% 100%;
+        background-repeat: no-repeat;
+        display: flex;
+    }
+
+    .slide-1{
+        background: none;
+        width: 445px;
+        padding: 0;
+    }
+
+    .slide-2{
+        width: 299px;
+        display: block;
+    }
+
+    .slide-2::before{
+        width: 207px;
+        height: 41px;
+        background: url(img/decoratespecial.png) no-repeat;
+    }
+    
+    .slide-2::after{
+        font-size: 16px;
+        top: 9px;
+        right: 11px;
+    }
+
+    .slider__list--first-slide{
+        margin-left: 62px;
+        color: #FFF;
+        list-style: none;
+        text-align: center;
+        font-size: 11.8px;
+        font-weight: 300;
+        line-height: 10px;
+        width: 230px;
+    }
+
+    .slider__list--second-slide{
+        margin-left: 80px;
+        margin-top: 57px;
+    }
+
+    .slider__title-first-slide{
+        margin-top: 22px;
+        margin-left: 74px;
+        margin-bottom: 10px;
+    }
+
+    slider__title-first-slide b{
+        font-size:32px;
+    }
+
+    .slider__del-price{
+        text-decoration: line-through;
+        color: #8B8B8B;
+        font-size: 18.8px;
+        line-height: 24.96px;
+    }
+
+    .slider__price{
+        font-size: 32px;
+    }
+}
+
+
+
+
+
+
