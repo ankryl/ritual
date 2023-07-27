@@ -102,9 +102,14 @@ body{
 
 .slide-2{
     display: block;
+    position: relative;
+    background: url(img/memorial.png);
+    background-position:-5% 87%;
+    background-repeat: no-repeat;
 }
 
-.main__slider::before{
+.slide-1::before,
+.slide-2::before{
     content: "";
     position: absolute;
     top: -2px;
@@ -115,7 +120,8 @@ body{
     pointer-events: none;
 }
 
-.main__slider::after{
+.slide-1::after,
+.slide-2::after{
     content: "спецпредложение";
     color: #FFF;
     font-size: 12px;
@@ -139,6 +145,7 @@ body{
     line-height: 12.8px; 
     width: 208px;
     margin-bottom: 10px;
+    margin-left: -140px;
 }
 
 .slider__title-first-slide b{
@@ -156,7 +163,7 @@ body{
 }
 
 .slider__list--first-slide{
-    margin-left: 10px;
+    margin-left: -140px;
     color: #FFF;
     list-style: none;
     text-align: center;
@@ -301,12 +308,14 @@ body{
     .slide-2{
         width: 299px;
         display: block;
+        background: none;
     }
 
     .slide-2::before{
         width: 207px;
         height: 41px;
         background: url(img/decoratespecial.png) no-repeat;
+
     }
     
     .slide-2::after{
@@ -316,7 +325,7 @@ body{
     }
 
     .slider__list--first-slide{
-        margin-left: 62px;
+        margin-left: -70px;
         color: #FFF;
         list-style: none;
         text-align: center;
@@ -333,7 +342,7 @@ body{
 
     .slider__title-first-slide{
         margin-top: 22px;
-        margin-left: 74px;
+        margin-left: -70px;
         margin-bottom: 10px;
     }
 
