@@ -16,7 +16,6 @@ body{
     /* height: 531px; */
 }
 
-
 /* main content */
 .main__content{
     width: 337px;
@@ -88,6 +87,16 @@ body{
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.main__slider-2{
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: none;
+    flex-direction: column;
 }
 .slide-1{
     background: url(img/memorial.png), url(img/bg-slider-1.png);
@@ -117,7 +126,7 @@ body{
 .slide-2::before{
     content: "";
     position: absolute;
-    top: -3px;
+    top: -2px;
     right: 0px;
     width: 187px;
     height: 31px;
@@ -227,6 +236,7 @@ body{
 
 .prev-button,
 .next-button {
+  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -240,25 +250,31 @@ body{
 }
 
 .prev-button {
-  left: 0px;
-}
+    left: 0%;
+  }
+  
+  .next-button {
+    right: 0%;
+  }
 
-.next-button {
-  right: 0px;
-}
+  .container-slider{
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
 
 
 
 @media(min-width:744px){
-
-.prev-button,
-.next-button {
-    display: none;
-    transform:none;
-}
-
     body{
         min-width: 744px;
+    }
+
+    .container-slider{
+    width: 744px;
+    margin-left: auto;
+    margin-right: auto;
     }
 
     .main__content{
@@ -316,6 +332,17 @@ body{
         background-position:50% 90%, 0% 100%;
         background-repeat: no-repeat;
         display: flex;
+        flex-direction: row;
+    }
+    .main__slider-2{
+        width: 744px;
+        margin-left: auto;
+        margin-right: auto;
+        background: url(img/memorial.png), url(img/bg-tablet.png);
+        background-position:50% 90%, 0% 100%;
+        background-repeat: no-repeat;
+        display: none;
+        flex-direction: row;
     }
 
     .slide-1{
@@ -337,7 +364,7 @@ body{
         height: 41px;
         background: url(img/decoratespecial.png) no-repeat;
         font-size: 16px;
-
+        pointer-events: none;
     }
     
     .slide-2::after{
@@ -386,22 +413,15 @@ body{
 
 
 @media(min-width:1920px){
-    .prev-button,
-    .next-button {
-        display: none;
-        transform:none;
-        color: grey;
-    }
     body{
         min-width: 1920px;
         position: relative;
     }
-
     main{
         display: flex;
         background: url(img/memorial\ desktop.png),url(img/decoratedesktop.png), url(img/bg-left-slider-desktop.png), linear-gradient(295deg, white 25%, transparent 25.1%), url(img/bg-middle-slider-desktop.png), url(img/Group1001desktop.png);
         background-repeat: no-repeat;
-        background-position: 83% 50%, 109% 0, 0%, 80%, 100%, 0;
+        background-position: 83% 50%, 107% 0, 0%, 80%, 100%, 0;
         position: absolute;
         padding-top: 14px;
         padding-bottom: 14px;
@@ -416,9 +436,12 @@ body{
         padding-bottom: 33px;
     }
 
-    .main__slider{
+    .main__slider,
+    .main__slider-2{
         background: none;
+        flex-direction: row;
     }
+
 
     .content__title{
         font-size: 24px;
@@ -458,6 +481,7 @@ body{
     .slide-1::before{
         background: none;
         content: "";
+        pointer-events: none;
     }
     .slide-1::after{
         background: none;
@@ -473,4 +497,7 @@ body{
     .slider__list--first-slide{
         row-gap: 5px;
     }
+}
+.container-slider{
+    position: relative;
 }

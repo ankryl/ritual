@@ -1,11 +1,11 @@
 
-const slider = document.querySelector(".main__slider");
+const slider = document.querySelector(".container-slider");
 const prevButton = document.querySelector(".prev-button");
 const nextButton = document.querySelector(".next-button");
-const slides = Array.from(slider.querySelectorAll(".slide"));
+const slides = Array.from(slider.querySelectorAll(".slide-item"));
 const slideCount = slides.length;
 let slideIndex = 0;
-const mediaQuery = window.matchMedia("(max-width: 743px)");
+
 
 prevButton.addEventListener("click", showPreviousSlide);
 nextButton.addEventListener("click", showNextSlide);
@@ -22,21 +22,16 @@ function showNextSlide() {
 }
 
 function updateSlider() {
-  if (mediaQuery.matches) {
+ 
     slides.forEach((slide, index) => {
       if (index === slideIndex) {
-        slide.style.display = "block";
+        slide.style.display = "flex";
       } else {
         slide.style.display = "none";
       }
     });
   }
-  // else {
-  //   slide.style.display = "block";
-  // }
-}
 
-// Инициализация слайдера
 updateSlider();
 
 // const resizeObserver = new ResizeObserver((entries) => {
@@ -55,3 +50,4 @@ updateSlider();
 //     }
 //   })
 // }
+
